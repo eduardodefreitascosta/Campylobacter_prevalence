@@ -49,63 +49,66 @@ a<-ggplot(campy2,aes(x =factor(meso),fill=factor(outcome))) +
   ggtitle("Region")+
   theme_minimal()+
   geom_bar(position="fill")+
-  geom_text(aes(label = ..count..), stat = "count" ,position = position_fill(.5),size=6)+
-  theme(axis.text.x = element_text(angle = 0, hjust = 0.5, vjust = 0.5))+
+  geom_text(aes(label = ..count..), stat = "count" ,position = position_fill(.5),size=3)+
+  #theme(axis.text.x = element_text(angle = 0, hjust = 0.5, vjust = 0.5))+
   xlab(" ") + ylab(" ")+
-  theme(
-    axis.title.x = element_text( size=18),
-    axis.title.y = element_text( size=20),
-    axis.text.x=element_text(size=rel(2.2),vjust = 1),
-    axis.text.y=element_text(size=rel(2.5),hjust = 4),
-    legend.text = element_text(size = 30),
-    legend.title = element_text(size = 30),
-    plot.title = element_text(size = 25))+
   labs(fill =substitute(" "))+
-  scale_fill_discrete(labels=my_lab1)+
-  scale_x_discrete(labels=my_lab)
+  theme(
+    axis.title.x = element_text( size=8),
+    axis.title.y = element_text( size=9),
+    axis.text.x=element_text(size=rel(0.95),vjust = 1,angle = 0, hjust = 0.5),
+    axis.text.y=element_text(size=rel(1.2),hjust = 4),
+    legend.text = element_text(size = 10),
+    legend.title = element_text(size = 15),
+    plot.title = element_text(size = 12),
+    plot.caption = element_text(hjust = 0,size = 14))+
+    scale_fill_discrete(labels=my_lab1)+
+    scale_x_discrete(labels=my_lab)
 
 
 # Vaccine
 b<-ggplot(subset(campy2,!is.na(vaccine)),aes(x =vaccine,fill=factor(outcome))) +
-  ggtitle("Vaccine")+
+   ggtitle("Vaccine")+
   theme_minimal()+
   geom_bar(position="fill")+
-  geom_text(aes(label = ..count..), stat = "count" ,position = position_fill(.5),size=6)+
+  geom_text(aes(label = ..count..), stat = "count" ,position = position_fill(.5),size=3)+
   theme(axis.text.x = element_text(angle = 0, hjust = 0.5, vjust = 0.5))+
   xlab(" ") + ylab(" ")+
-  theme(
-    axis.title.x = element_text( size=18),
-    axis.title.y = element_text( size=20),
-    axis.text.x=element_text(size=rel(2.2),vjust = 1),
-    axis.text.y=element_text(size=rel(2.5),hjust = 4),
-    legend.text = element_text(size = 30),
-    legend.title = element_text(size = 30),
-    plot.title = element_text(size = 25))+
   labs(fill =substitute(" "))+
-  scale_fill_discrete(labels=my_lab1)+
-  scale_x_discrete(labels=c("No","Yes"))
+  theme(
+    axis.title.x = element_text( size=8),
+    axis.title.y = element_text( size=9),
+    axis.text.x=element_text(size=rel(1.2),vjust = 1),
+    axis.text.y=element_text(size=rel(1.2),hjust = 4),
+    legend.text = element_text(size = 10),
+    legend.title = element_text(size = 15),
+    plot.title = element_text(size = 12),
+    plot.caption = element_text(hjust = 0,size = 14))+
+    scale_fill_discrete(labels=my_lab1)+
+    scale_x_discrete(labels=c("No","Yes"))
 
 
 
 # Exploration
 c<-ggplot(campy2,aes(x =exploration,fill=factor(outcome))) +
-  ggtitle("Exploration")+
+  ggtitle("Type of farm")+
   theme_minimal()+
   geom_bar(position="fill")+
-  geom_text(aes(label = ..count..), stat = "count" ,position = position_fill(.5),size=6)+
+  geom_text(aes(label = ..count..), stat = "count" ,position = position_fill(.5),size=3)+
   theme(axis.text.x = element_text(angle = 0, hjust = 0.5, vjust = 0.5))+
   xlab(" ") + ylab(" ")+
-  theme(
-    axis.title.x = element_text( size=18),
-    axis.title.y = element_text( size=20),
-    axis.text.x=element_text(size=rel(2.2),vjust = 1),
-    axis.text.y=element_text(size=rel(2.5),hjust = 4),
-    legend.text = element_text(size = 30),
-    legend.title = element_text(size = 30),
-    plot.title = element_text(size = 25))+
   labs(fill =substitute(" "))+
-  scale_fill_discrete(labels=my_lab1)+
-  scale_x_discrete(labels=c("Complete \ncicle","Raising & \nrestocking"))
+  theme(
+    axis.title.x = element_text( size=8),
+    axis.title.y = element_text( size=9),
+    axis.text.x=element_text(size=rel(0.95),vjust = 1),
+    axis.text.y=element_text(size=rel(1.2),hjust = 4),
+    legend.text = element_text(size = 10),
+    legend.title = element_text(size = 15),
+    plot.title = element_text(size = 12),
+    plot.caption = element_text(hjust = 0,size = 14))+
+    scale_fill_discrete(labels=my_lab1)+
+    scale_x_discrete(labels=c("Complete \ncicle","Raising & \nrestocking"))
 
 
 # Bull sale
@@ -115,20 +118,21 @@ d<-ggplot(subset(campy2,!is.na(bull_sale)),aes(x =bull_sale,fill=factor(outcome)
   ggtitle("Bull sale")+
   theme_minimal()+
   geom_bar(position="fill")+
-  geom_text(aes(label = ..count..), stat = "count" ,position = position_fill(.5),size=6)+
+  geom_text(aes(label = ..count..), stat = "count" ,position = position_fill(.5),size=3)+
   theme(axis.text.x = element_text(angle = 0, hjust = 0.5, vjust = 0.5))+
   xlab(" ") + ylab(" ")+
-  theme(
-    axis.title.x = element_text( size=18),
-    axis.title.y = element_text( size=20),
-    axis.text.x=element_text(size=rel(2.2),vjust = 1),
-    axis.text.y=element_text(size=rel(2.5),hjust = 4),
-    legend.text = element_text(size = 30),
-    legend.title = element_text(size = 30),
-    plot.title = element_text(size = 25))+
   labs(fill =substitute(" "))+
-  scale_fill_discrete(labels=my_lab1)+
-  scale_x_discrete(labels=c("No","Yes"))
+  theme(
+    axis.title.x = element_text( size=8),
+    axis.title.y = element_text( size=9),
+    axis.text.x=element_text(size=rel(1.2),vjust = 1),
+    axis.text.y=element_text(size=rel(1.2),hjust = 4),
+    legend.text = element_text(size = 15),
+    legend.title = element_text(size = 15),
+    plot.title = element_text(size = 12),
+    plot.caption = element_text(hjust = 0,size = 14))+
+    scale_fill_discrete(labels=my_lab1)+
+    scale_x_discrete(labels=c("No","Yes"))
 
 
 
@@ -139,23 +143,24 @@ d<-ggplot(subset(campy2,!is.na(bull_sale)),aes(x =bull_sale,fill=factor(outcome)
 kable(table(campy2$tour_repa))
 
 e<-ggplot(campy2,aes(x =tour_repa,fill=factor(outcome))) +
-  ggtitle("Bull repass")+
+  ggtitle("Natural service")+
   theme_minimal()+
   geom_bar(position="fill")+
-  geom_text(aes(label = ..count..), stat = "count" ,position = position_fill(.5),size=6)+
+  geom_text(aes(label = ..count..), stat = "count" ,position = position_fill(.5),size=3)+
   theme(axis.text.x = element_text(angle = 0, hjust = 0.5, vjust = 0.5))+
   xlab(" ") + ylab(" ")+
-  theme(
-    axis.title.x = element_text( size=18),
-    axis.title.y = element_text( size=20),
-    axis.text.x=element_text(size=rel(2.2),vjust = 1),
-    axis.text.y=element_text(size=rel(2.5),hjust = 4),
-    legend.text = element_text(size = 30),
-    legend.title = element_text(size = 30),
-    plot.title = element_text(size = 25))+
   labs(fill =substitute(" "))+
-  scale_fill_discrete(labels=my_lab1)+
-  scale_x_discrete(labels=c("No","Yes"))
+  theme(
+    axis.title.x = element_text( size=9),
+    axis.title.y = element_text( size=8),
+    axis.text.x=element_text(size=rel(1.2),vjust = 1),
+    axis.text.y=element_text(size=rel(1.2),hjust = 4),
+    legend.text = element_text(size = 10),
+    legend.title = element_text(size = 15),
+    plot.title = element_text(size = 12),
+    plot.caption = element_text(hjust = 0,size = 14))+
+    scale_fill_discrete(labels=my_lab1)+
+    scale_x_discrete(labels=c("No","Yes"))
 
 
 # Cfv testing
@@ -165,26 +170,27 @@ f<-ggplot(campy2,aes(x =CGB,fill=factor(outcome))) +
   ggtitle("Cfv test")+
   theme_minimal()+
   geom_bar(position="fill")+
-  geom_text(aes(label = ..count..), stat = "count" ,position = position_fill(.5),size=6)+
+  geom_text(aes(label = ..count..), stat = "count" ,position = position_fill(.5),size=3)+
   theme(axis.text.x = element_text(angle = 0, hjust = 0.5, vjust = 0.5))+
   xlab(" ") + ylab(" ")+
-  theme(
-    axis.title.x = element_text( size=18),
-    axis.title.y = element_text( size=20),
-    axis.text.x=element_text(size=rel(2.2),vjust = 1),
-    axis.text.y=element_text(size=rel(2.5),hjust = 4),
-    legend.text = element_text(size = 30),
-    legend.title = element_text(size = 30),
-    plot.title = element_text(size = 25))+
   labs(fill =substitute(" "))+
-  scale_fill_discrete(labels=my_lab1)+
-  scale_x_discrete(labels=c("No","Yes"))
+  theme(
+    axis.title.x = element_text( size=9),
+    axis.title.y = element_text( size=8),
+    axis.text.x=element_text(size=rel(1.2),vjust = 1),
+    axis.text.y=element_text(size=rel(1.2),hjust = 4),
+    legend.text = element_text(size = 10),
+    legend.title = element_text(size = 15),
+    plot.title = element_text(size = 12),
+    plot.caption = element_text(hjust = 0,size = 14))+
+    scale_fill_discrete(labels=my_lab1)+
+    scale_x_discrete(labels=c("No","Yes"))
 
 #Arrange the plots
-ggarrange(a,b,c,d,e,f,ncol=3, nrow=2, common.legend = TRUE, legend="bottom")
+ggarrange(a,b,c,d,e,f,ncol=2, nrow=3, common.legend = TRUE, legend="bottom")
 
-#Save figure in PNG
-ggsave(file=here("Figures","Fig1.png"),bg="white",width=15,height = 7,units = "in",last_plot(),dpi=300)
+#Save figure in tiff
+ggsave(file=here("Figures","Fig1.tiff"),bg="white",width=18,height = 18,units = "cm",last_plot(),dpi=600,compression = 'lzw')
 
 
 ###################################

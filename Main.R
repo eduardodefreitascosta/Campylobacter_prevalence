@@ -2,10 +2,10 @@
 ##Packages###
 
 #Packages to be used
-packages<-c("readxl","knitr","ggplot2","ggpubr","here","Momocs",
+packages<-c("readxl","knitr","ggplot2","ggpubr","here",
             "tidyverse","grid","ggridges","ggthemes","extrafont","gridExtra",
             "ggridges","car","emmeans","lsmeans", "multcomp",
-            "tidybayes","modelr","extraDistr","coda","rjags")
+            "tidybayes","modelr","extraDistr","coda","rjags","patchwork")
 
 # Install packages not yet installed
 installed_packages <- packages %in% rownames(installed.packages())
