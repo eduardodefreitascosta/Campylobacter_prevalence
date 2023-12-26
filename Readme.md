@@ -10,7 +10,8 @@
 
 https://link.springer.com/article/10.1007/s42770-023-01119-7
 
-Cite this article
+**Cite this article:**
+
 Siqueira, F.M., Breyer, G.M., De Carli, S. et al. A cross-sectional study on Campylobacter fetus subsp. venerealis prevalence and associated factors in Brazilian southern cattle farms. Braz J Microbiol 54, 3291–3297 (2023). https://doi.org/10.1007/s42770-023-01119-7
 
 
